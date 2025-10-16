@@ -1,27 +1,43 @@
 # La ilusión de lo “post”
 
-**La ilusión de lo “post”** es una obra visual interactiva desarrollada en [p5.js](https://p5js.org) y presentada como parte de la exposición **SIROCOLAB**.
+**La ilusión de lo “post”** es una obra generativa desarrollada con [p5.js](https://p5js.org), creada por **Mónica Gómez** como parte de la exposición **SIROCOLAB**.
 
-La pieza nace de una pregunta incómoda:  
+Nace de una inquietud compartida:  
 > ¿Y si no estamos realmente en el “después”?  
 > ¿Y si seguimos atrapados en lo mismo, solo que con nombres distintos?
-
-Vivimos rodeados de etiquetas que nos prometen haber superado algo: postmodernidad, postcapitalismo, posthumanismo. Pero en realidad, seguimos operando con la misma lógica de control, expansión y huida hacia adelante. El prefijo “post” se convierte en una ilusión de distancia, una forma elegante de no mirar de frente.
-
-Esta obra no propone una nueva etapa. No hay futurismo ni evasión. Lo que propone es una **vuelta al presente**. Al cuerpo. A la Tierra.
 
 ---
 
 ## 🌍 Concepto
 
-El código genera dos paisajes alternantes:
+Vivimos rodeados de etiquetas que nos prometen que ya hemos superado algo: *posthumanismo*, *postmodernidad*, *postcapitalismo*.  
+Pero nada desaparece con solo cambiarle el nombre.
 
-- 🌊 **Ondas**: líneas que vibran como resonancias telúricas, evocando la respiración del planeta y las frecuencias naturales como las resonancias de Schumann.
-- 🌐 **Planeta**: una esfera giratoria en la que los humanos se desplazan, no como conquista, sino como coexistencia.
+Esta obra parte de esa ilusión. No para burlarse de ella, sino para desmontarla desde adentro.  
+No busca nuevas ideas ni grandes sistemas. Propone un **cambio de lugar**. Una vuelta al **suelo**. Una reconexión.
 
-Ambos modos se alternan a través de gestos simples (una tecla o un toque), como metáfora del poder de elegir desde dónde mirar y con quién caminar.
+Las **dos animaciones** que se alternan representan estados simbólicos:
 
-Entre estos paisajes, se desplazan figuras llamadas **humanos**: trayectorias individuales en un entorno común, que no buscan huida sino anclaje.
+- 🌊 **Modo ondas**: líneas orgánicas que vibran como la Tierra, como las resonancias de Schumann, como el cuerpo cuando escucha.
+- 🌐 **Modo planeta**: una esfera rotante poblada de humanos que no colonizan, sino que cohabitan y reconstruyen su vínculo con el planeta.
+
+En ambos modos, pequeños seres —**los humanos**— recorren estos territorios. No como observadores externos, sino como parte del pulso.
+
+> No se trata de mirar la Luna (el vídeo),  
+> sino de vernos a nosotros mismos, aquí y ahora.
+
+---
+
+## ✳️ Crítica al “post”
+
+> Decir “post” a veces es una forma elegante de no mirar de frente.  
+> Nos anestesia, nos distrae, nos aleja del presente.  
+> Pero no estamos en el final de nada.  
+> Estamos en medio de todo.
+
+La ilusión de lo “post” no nos salva. Solo nos aleja.  
+Esta obra propone otra cosa:  
+**Reconstruir** —con otros, con código, con Tierra.
 
 ---
 
@@ -31,34 +47,27 @@ Entre estos paisajes, se desplazan figuras llamadas **humanos**: trayectorias in
 
 - **Flecha derecha (→):** activa el modo planeta
 - **Flecha izquierda (←):** regresa al modo ondas
-- **Barra espaciadora (␣):** activa o detiene un vídeo de contexto visual
+- **Barra espaciadora (␣):** muestra/oculta el vídeo (la “Luna”)
 
 ### En móviles
 
 - **Tocar la pantalla:** alterna entre los dos modos de animación  
-- El vídeo **no se reproduce** en móvil
+- El vídeo **no se reproduce** en dispositivos móviles
 
 ---
 
-## 🎛️ Estructura visual
+## 🎛️ Forma y tecnología
 
-- Relación de aspecto **9:16**, centrada y adaptada a todo tipo de pantalla
-- Visualización generativa en tiempo real, con ruido orgánico y desplazamiento fluido
-- Interpolación suave entre estado atmosférico (ondas) y planetario (esfera)
-- Estética monocroma con acentos cromáticos móviles (los humanos)
-
----
-
-## ✳️ Crítica al “post”
-
-> No estamos en el final de nada.  
-> Estamos en medio de todo.
-
-Esta obra no es sobre el futuro. Es sobre el **presente negado**, lo que ya está mal y aún necesita ser tocado, cuidado, compartido.
-
-**No hay “después”. Hay aquí.**
+- Canvas vertical **9:16**, siempre centrado y adaptado a cualquier pantalla
+- Visualización **generativa**, animada en tiempo real
+- Uso de ruido orgánico, sin loops predefinidos
+- Paleta limitada: blanco y negro, acentuada por los trazos vivos de los humanos
+- Basado en [p5.js](https://p5js.org)
 
 ---
 
-© 2025 [Mónica Gómez](https://m0n1c4g0m3z.github.io)  
-Exposición: [SIROCOLAB](https://sirocolab.com)
+## 🧭 Créditos
+
+**Obra y código:** [Mónica Gómez](https://m0n1c4g0m3z.github.io)  
+**Exposición:** [SIROCOLAB](https://sirocolab.com)  
+**Año:** 2025
