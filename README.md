@@ -20,7 +20,7 @@ Las **dos animaciones** que se alternan representan estados simbólicos:
 
 - 🌊 **Modo ondas**: líneas orgánicas que vibran como la Tierra, como las resonancias de Schumann, como el cuerpo cuando escucha.
 - 🌐 **Modo planeta**: una esfera rotante poblada de humanos que no colonizan, sino que cohabitan y reconstruyen su vínculo con el planeta.
-- 🫂 **Modo humanos**: que reconfiguramos un nuevo código en nuestra relación con La Tierra. Un pulso.
+- 🫂 **Modo humanos**: reconfiguramos un nuevo código en nuestra relación con La Tierra. Un pulso.
 En ambos modos, pequeños seres —**los humanos**— recorren estos territorios. No como observadores externos, sino como parte del pulso.
 
 > No se trata solo de mirar hacia arriba, la Luna (el vídeo),  
