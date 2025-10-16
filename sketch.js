@@ -1,10 +1,11 @@
+
 let numLineas = 100;
 let numPuntos = 80;
 let offsets = [];
 let time = 0;
 
-let surfers = [];
-let numSurfers = 200;
+let humanos = [];
+let numHumanos = 200;
 
 let viewX, viewY, viewW, viewH;
 
@@ -17,6 +18,7 @@ let mostrarVideo = false;
 function preload() {
   video = createVideo('https://dl.dropboxusercontent.com/scl/fi/qwtenazm9o9any676tnp0/P9.mp4?rlkey=irt8duuq14k1z6o7e849jokl1&st=rixixehn');
   video.hide();
+  video.elt.setAttribute('playsinline', ''); // para móviles
 }
 
 function setup() {
@@ -32,8 +34,8 @@ function setup() {
     }
   }
 
-  for (let i = 0; i < numSurfers; i++) {
-    surfers.push(new Surfer());
+  for (let i = 0; i < numHumanos; i++) {
+    humanos.push(new Humano());
   }
 }
 
@@ -49,15 +51,15 @@ function draw() {
 
   if (!modoPlaneta) {
     dibujarOndasNormales();
-    for (let s of surfers) {
-      s.update();
-      s.display();
+    for (let h of humanos) {
+      h.update();
+      h.display();
     }
   } else {
     dibujarPlaneta();
-    for (let s of surfers) {
-      s.update();
-      s.displaySobrePlaneta();
+    for (let h of humanos) {
+      h.update();
+      h.displaySobrePlaneta();
     }
   }
 
@@ -77,6 +79,11 @@ function keyPressed() {
 
   if (keyCode === RIGHT_ARROW) modoPlaneta = true;
   if (keyCode === LEFT_ARROW) modoPlaneta = false;
+}
+
+function touchStarted() {
+  modoPlaneta = !modoPlaneta;
+  return false;
 }
 
 function calcularVista() {
@@ -144,7 +151,7 @@ function dibujarPlaneta() {
   ellipse(cx, cy, r * 2, r * 2 * 0.95);
 }
 
-class Surfer {
+class Humano {
   constructor() {
     this.reset();
   }
@@ -201,13 +208,4 @@ class Surfer {
       case 2: ellipse(x, y, s * 0.6, s); break;
     }
   }
-}
-
-
-
-
-
-function touchStarted() {
-  modoPlaneta = !modoPlaneta;  // Tocar alterna entre los modos visuales
-  return false;
 }
