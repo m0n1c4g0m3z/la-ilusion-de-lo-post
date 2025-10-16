@@ -3,8 +3,8 @@ let numPuntos = 80;
 let offsets = [];
 let time = 0;
 
-let humanos = [];
-let numHumanos = 200;
+let surfers = [];
+let numSurfers = 200;
 
 let viewX, viewY, viewW, viewH;
 
@@ -20,7 +20,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(405, 720);
+  let canvas = createCanvas(405, 720);
+  canvas.parent('p5-holder');
   background(0);
   calcularVista();
 
@@ -31,8 +32,8 @@ function setup() {
     }
   }
 
-  for (let i = 0; i < numHumanos; i++) {
-    humanos.push(new Humano());
+  for (let i = 0; i < numSurfers; i++) {
+    surfers.push(new Surfer());
   }
 }
 
@@ -48,13 +49,13 @@ function draw() {
 
   if (!modoPlaneta) {
     dibujarOndasNormales();
-    for (let s of humanos) {
+    for (let s of surfers) {
       s.update();
       s.display();
     }
   } else {
     dibujarPlaneta();
-    for (let s of humanos) {
+    for (let s of surfers) {
       s.update();
       s.displaySobrePlaneta();
     }
@@ -143,7 +144,7 @@ function dibujarPlaneta() {
   ellipse(cx, cy, r * 2, r * 2 * 0.95);
 }
 
-class Humano {
+class Surfer {
   constructor() {
     this.reset();
   }
@@ -200,4 +201,10 @@ class Humano {
       case 2: ellipse(x, y, s * 0.6, s); break;
     }
   }
+}
+
+
+function touchStarted() {
+  modoPlaneta = true;  // Al tocar, activa modo planeta
+  return false;
 }
