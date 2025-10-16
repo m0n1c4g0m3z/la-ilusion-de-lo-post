@@ -204,7 +204,10 @@ class Surfer {
 }
 
 
+
+
+
 function touchStarted() {
-  modoPlaneta = true;  // Al tocar, activa modo planeta
+  modoPlaneta = !modoPlaneta;  // Tocar alterna entre los modos visuales
   return false;
 }
