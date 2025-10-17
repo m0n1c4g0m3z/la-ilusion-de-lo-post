@@ -1,6 +1,6 @@
 # La ilusión de lo “post”
 
-**La ilusión de lo “post”** es una obra generativa desarrollada con [p5.js](https://p5js.org), creada por **Mónica Gómez** como parte de la exposición **SirocoLab**.
+**La ilusión de lo “post”** es una obra generativa desarrollada con [p5.js](https://p5js.org), creada por **Mónica Gómez** como parte de la exposición digital #reconeect en SirocoLab.
 
 Nace de una inquietud compartida:  
 > ¿Y si no estamos realmente en el “después”?  
