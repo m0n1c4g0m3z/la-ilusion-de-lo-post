@@ -70,5 +70,5 @@ Esta obra propone otra cosa:
 
 **Obra y código:** [Mónica Gómez](https://m0n1c4g0m3z.github.io)  
 **Exposición:** [reconeect](https://m0n1c4g0m3z.com/reconeect) 
-**Referencias vídeo:** NASA. (s.f.). *NASA*. https://www.nasa.gov/
+**Referencias vídeo:** [NASA. (s.f.). *NASA*. https://www.nasa.gov/) 
 **Año:** 2025
