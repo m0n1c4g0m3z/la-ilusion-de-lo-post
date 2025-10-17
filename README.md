@@ -69,5 +69,5 @@ Esta obra propone otra cosa:
 ## 🧭 Créditos
 
 **Obra y código:** [Mónica Gómez](https://m0n1c4g0m3z.github.io)  
-**Exposición:** [SIROCOLAB](https://sirocolab.com)  
+**Exposición:** [reconeect](https://m0n1c4g0m3z.com/reconeect) 
 **Año:** 2025
