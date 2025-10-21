@@ -22,7 +22,7 @@ function preload() {
 }
 
 function setup() {
-  let canvas = createCanvas(405, 720);
+  let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('p5-holder');
   background(0);
   calcularVista();
@@ -208,4 +208,7 @@ class Humano {
       case 2: ellipse(x, y, s * 0.6, s); break;
     }
   }
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
