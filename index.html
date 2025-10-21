@@ -1,38 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>La ilusión de lo “post”</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: black;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-  }
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
 
-  #p5-holder {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
+    #p5-holder {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: env(safe-area-inset-top);
+      padding-right: env(safe-area-inset-right);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+    }
 
-  canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw !important;
-    height: 100vh !important;
-    display: block;
-  }
-</style>
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw !important;
+      height: 100dvh !important;
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <div id="p5-holder"></div>

@@ -1,4 +1,3 @@
-
 let numLineas = 100;
 let numPuntos = 80;
 let offsets = [];
@@ -15,6 +14,14 @@ let planetaRotacion = 0;
 let video;
 let mostrarVideo = false;
 
+// Variables de zoom táctil
+let escala = 1;
+let desplazamientoX = 0;
+let desplazamientoY = 0;
+let toqueInicialDist = null;
+let escalaInicial = 1;
+let toqueAnterior = null;
+
 function preload() {
   video = createVideo('https://dl.dropboxusercontent.com/scl/fi/qwtenazm9o9any676tnp0/P9.mp4?rlkey=irt8duuq14k1z6o7e849jokl1&st=rixixehn');
   video.hide();
@@ -24,6 +31,9 @@ function preload() {
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('p5-holder');
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+    pixelDensity(1);
+  }
   background(0);
   calcularVista();
 
@@ -41,6 +51,12 @@ function setup() {
 
 function draw() {
   background(0);
+
+  push();
+  // Aplicar zoom y desplazamiento
+  translate(width / 2 + desplazamientoX, height / 2 + desplazamientoY);
+  scale(escala);
+  translate(-width / 2, -height / 2);
 
   if (mostrarVideo) {
     let aspectRatio = video.width / video.height;
@@ -63,6 +79,7 @@ function draw() {
     }
   }
 
+  pop();
   time += 0.01;
   planetaRotacion += 0.01;
 }
@@ -83,7 +100,49 @@ function keyPressed() {
 
 function touchStarted() {
   modoPlaneta = !modoPlaneta;
+  toqueAnterior = touches[0] ? { x: touches[0].x, y: touches[0].y } : null;
   return false;
+}
+
+function touchMoved(event) {
+  if (touches.length === 2) {
+    const dx = touches[0].x - touches[1].x;
+    const dy = touches[0].y - touches[1].y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+
+    if (toqueInicialDist == null) {
+      toqueInicialDist = dist;
+      escalaInicial = escala;
+    } else {
+      const factor = dist / toqueInicialDist;
+      escala = constrain(escalaInicial * factor, 0.5, 4);
+    }
+    return false;
+  } else if (touches.length === 1 && toqueAnterior) {
+    desplazamientoX += touches[0].x - toqueAnterior.x;
+    desplazamientoY += touches[0].y - toqueAnterior.y;
+    toqueAnterior = { x: touches[0].x, y: touches[0].y };
+    return false;
+  }
+  return false;
+}
+
+function touchEnded() {
+  toqueInicialDist = null;
+  toqueAnterior = null;
+}
+
+function doubleClicked() {
+  escala = 1;
+  desplazamientoX = 0;
+  desplazamientoY = 0;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  if (typeof calcularVista === 'function') {
+    calcularVista(width, height);
+  }
 }
 
 function calcularVista() {
@@ -208,7 +267,4 @@ class Humano {
       case 2: ellipse(x, y, s * 0.6, s); break;
     }
   }
-}
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
 }
